@@ -21,7 +21,7 @@ composer require dvdx1995/cs-float-php-bundle
 ```php
 <?php
 
-use Dvdx1995\CsFloatPhpBundle\Service\CsFloatInventoryApiService;
+useCsFloatPhpBundle\Service\CsFloatInventoryApiService;
 
 // Create the API service with your API key
 $apiKey = 'YOUR_API_KEY';
@@ -47,13 +47,13 @@ foreach ($inventoryItems as $item) {
 }
 
 // You can also create your own custom request extending AbstractRequest
-use Dvdx1995\CsFloatPhpBundle\AbstractRequest;
+use CsFloatPhpBundle\AbstractRequest;
 
 class YourRequest extends AbstractRequest
 {
     public function getMethod(): string
     {
-        return 'request method';
+        return 'GET';
     }
 
     public function getUrl(): string
@@ -61,16 +61,17 @@ class YourRequest extends AbstractRequest
         return 'some url';
     }
 
-    public function getBody(): array
+    public function getParams(): array
     {
         return [
-            'body' => [
+            'form_params' => [
                 'some value' => 'abc',
             ],
         ];
     }
 }
 ```
+
 
 
 
