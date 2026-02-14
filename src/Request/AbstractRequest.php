@@ -1,6 +1,8 @@
 <?php
 
-use Exception\ResponseException;
+namespace CsFloatPhpBundle\Request;
+
+use CsFloatPhpBundle\Exception\ResponseException;
 use Psr\Http\Message\ResponseInterface;
 
 abstract class AbstractRequest

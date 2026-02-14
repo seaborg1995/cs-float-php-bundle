@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Dvdx1995\\CsFloatPhpBundle\\": "src/"
+            "CsFloatPhpBundle\\": "src/"
         }
     },
     "authors": [

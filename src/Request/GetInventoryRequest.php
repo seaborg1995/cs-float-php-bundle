@@ -1,6 +1,8 @@
 <?php
 
-use Helper\RequestMethodConst;
+namespace CsFloatPhpBundle\Request;
+
+use CsFloatPhpBundle\Helper\RequestMethodConst;
 
 class GetInventoryRequest extends AbstractRequest
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Service;
+namespace CsFloatPhpBundle\Service;
 
-use GetInventoryRequest;
-use PostInventoryItemRequest;
+use CsFloatPhpBundle\Request\GetInventoryRequest;
+use CsFloatPhpBundle\Request\PostInventoryItemRequest;
 
 class CsFloatInventoryApiService extends CsFloatApiService
 {

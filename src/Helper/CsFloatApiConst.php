@@ -1,6 +1,6 @@
 <?php
 
-namespace Helper;
+namespace CsFloatPhpBundle\Helper;
 
 class CsFloatApiConst
 {

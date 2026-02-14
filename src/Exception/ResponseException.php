@@ -1,6 +1,6 @@
 <?php
 
-namespace Exception;
+namespace CsFloatPhpBundle\Exception;
 
 class ResponseException extends \Exception
 {

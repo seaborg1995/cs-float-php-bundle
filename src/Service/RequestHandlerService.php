@@ -1,8 +1,8 @@
 <?php
 
-namespace Service;
+namespace CsFloatPhpBundle\Service;
 
-use AbstractRequest;
+use CsFloatPhpBundle\Request\AbstractRequest;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 

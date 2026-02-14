@@ -1,10 +1,10 @@
 <?php
 
-namespace Service;
+namespace CsFloatPhpBundle\Service;
 
-use AbstractRequest;
+use CsFloatPhpBundle\Helper\CsFloatApiConst;
+use CsFloatPhpBundle\Request\AbstractRequest;
 use GuzzleHttp\Client;
-use Helper\CsFloatApiConst;
 
 class CsFloatApiService
 {
