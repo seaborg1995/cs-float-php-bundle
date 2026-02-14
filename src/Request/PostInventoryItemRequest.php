@@ -18,16 +18,18 @@ class PostInventoryItemRequest extends AbstractRequest
         return 'listings';
     }
 
-    public function buyNow(int $assetId, int $price)
+    public function buyNow(int $assetId, int $price): self
     {
         $this->params = [
             'asset_id' => $assetId,
             'type' => 'buy_now',
             'price' => $price,
         ];
+
+        return $this;
     }
 
-    public function auction(int $assetId, int $reservedPrice, int $durationDays)
+    public function auction(int $assetId, int $reservedPrice, int $durationDays): self
     {
         $this->params = [
             'asset_id' => $assetId,
@@ -35,6 +37,8 @@ class PostInventoryItemRequest extends AbstractRequest
             'reserved_price' => $reservedPrice,
             'duration_days' => $durationDays,
         ];
+
+        return $this;
     }
 
     public function getParams(): array

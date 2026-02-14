@@ -19,19 +19,17 @@ class CsFloatInventoryApiService extends CsFloatApiService
     /** This method list your inventory item on market with buy now method */
     public function sellBuyNow(int $assetId, int $price): array
     {
-        $request = new PostInventoryItemRequest();
-
-        $request->buyNow($assetId, $price);
-
-        return $this->call($request);
+        return $this->call($this->postItemRequest()->buyNow($assetId, $price));
     }
 
+    /** This method list your inventory item on market with auction method */
     public function sellAuction(int $assetId, int $reservedPrice, int $durationDays): array
     {
-        $request = new PostInventoryItemRequest();
+        return $this->call($this->postItemRequest()->auction($assetId, $reservedPrice, $durationDays));
+    }
 
-        $request->auction($assetId, $reservedPrice, $durationDays);
-
-        return $this->call($request);
+    private function postItemRequest(): PostInventoryItemRequest
+    {
+        return new PostInventoryItemRequest();
     }
 }
