@@ -4,7 +4,7 @@ namespace CsFloatPhpBundle\Request;
 
 use CsFloatPhpBundle\Helper\RequestMethodConst;
 
-class PostInventoryItemRequest extends AbstractRequest
+class PostUserListingRequest extends AbstractRequest
 {
     private $params;
 

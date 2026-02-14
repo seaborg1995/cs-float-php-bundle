@@ -22,7 +22,7 @@ class GetUserStallRequest extends AbstractRequest
 
     public function getUrl(): string
     {
-        return 'users/' . $this->steam64Id . '/stall';
+        return sprintf('users/%d/stall', $this->steam64Id);
     }
 
     public function getParams(): array

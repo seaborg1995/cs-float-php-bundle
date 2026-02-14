@@ -21,11 +21,11 @@ composer require dvdx1995/cs-float-php-bundle
 ```php
 <?php
 
-use CsFloatPhpBundle\Service\CsFloatInventoryApiService;
+use CsFloatPhpBundle\Service\CsFloatListingApiService;
 
 // Create the API service with your API key
 $apiKey = 'YOUR_API_KEY';
-$apiService = new CsFloatInventoryApiService($apiKey);
+$apiService = new CsFloatListingApiService($apiKey);
 
 // Get your inventory items
 $inventoryItems = $apiService->getInventory();

@@ -9,10 +9,8 @@ class GetItemSalesHistoryRequest extends AbstractRequest
     private $paintIndex;
     private $itemFullName;
 
-    public function __construct(
-        string $itemFullName,
-        int $paintIndex
-    ) {
+    public function __construct(string $itemFullName, int $paintIndex)
+    {
         $this->paintIndex = $paintIndex;
         $this->itemFullName = $itemFullName;
     }
@@ -24,7 +22,7 @@ class GetItemSalesHistoryRequest extends AbstractRequest
 
     public function getUrl(): string
     {
-        return 'history/' . $this->itemFullName . '/sales';
+        return sprintf('history/%s/sales', $this->itemFullName);
     }
 
     public function getParams(): array

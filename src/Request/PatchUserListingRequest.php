@@ -24,7 +24,7 @@ class PatchUserListingRequest extends AbstractRequest
         return 'listings/' . $this->listingId;
     }
 
-    public function hideListing(bool $status): self
+    public function setPrivate(bool $status): self
     {
         $this->params = ['private' => $status];
 
