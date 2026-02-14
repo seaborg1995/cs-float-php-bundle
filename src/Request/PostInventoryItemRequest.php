@@ -6,7 +6,7 @@ use CsFloatPhpBundle\Helper\RequestMethodConst;
 
 class PostInventoryItemRequest extends AbstractRequest
 {
-    private $body;
+    private $params;
 
     public function getMethod(): string
     {
@@ -15,12 +15,12 @@ class PostInventoryItemRequest extends AbstractRequest
 
     public function getUrl(): string
     {
-        return '/listings';
+        return 'listings';
     }
 
     public function buyNow(int $assetId, int $price)
     {
-        $this->body = [
+        $this->params = [
             'asset_id' => $assetId,
             'type' => 'buy_now',
             'price' => $price,
@@ -29,7 +29,7 @@ class PostInventoryItemRequest extends AbstractRequest
 
     public function auction(int $assetId, int $reservedPrice, int $durationDays)
     {
-        $this->body = [
+        $this->params = [
             'asset_id' => $assetId,
             'type' => 'auction',
             'reserved_price' => $reservedPrice,
@@ -37,8 +37,8 @@ class PostInventoryItemRequest extends AbstractRequest
         ];
     }
 
-    public function getBody(): array
+    public function getParams(): array
     {
-        return ['body' => $this->body];
+        return ['form_params' => $this->params];
     }
 }

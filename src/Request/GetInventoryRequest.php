@@ -13,10 +13,10 @@ class GetInventoryRequest extends AbstractRequest
 
     public function getUrl(): string
     {
-        return '/me/inventory';
+        return 'me/inventory';
     }
 
-    public function getBody(): array
+    public function getParams(): array
     {
         return [];
     }

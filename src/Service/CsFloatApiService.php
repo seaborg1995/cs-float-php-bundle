@@ -12,16 +12,16 @@ class CsFloatApiService
 
     public function __construct(string $apiKey, ?Client $client = null)
     {
-        $client = $client ?? new Client([
-            'base_uri' => CsFloatApiConst::API_V1_URL,
-            'headers' => [
-                'Authorization' => $apiKey,
-            ],
-        ]);
+        $client = $client ?? new Client(['base_uri' => CsFloatApiConst::API_V1_URL]);
 
-        $this->handler = new RequestHandlerService($client);
+        $this->handler = new RequestHandlerService($client, $apiKey);
     }
 
+    /**
+     * you can call this method with your own AbstractRequest
+     * @param AbstractRequest $request
+     * @return array
+     */
     protected function call(AbstractRequest $request): array
     {
         return $this->handler->handleApiRequest($request);
