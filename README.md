@@ -53,7 +53,7 @@ class YourRequest extends AbstractRequest
 {
     public function getMethod(): string
     {
-        return 'GET';
+        return 'POST';
     }
 
     public function getUrl(): string
