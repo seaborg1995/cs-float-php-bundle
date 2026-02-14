@@ -38,12 +38,12 @@ foreach ($inventoryItems as $item) {
     $price = 100 // 1$
 
     // Sell the item as Buy Now
-    $apiService->sellBuyNow($assetId, $price);
+    $apiService->createBuyNowListing($assetId, $price);
 
     // Sell the item via Auction
     $reservedPrice = 80 // 80 cents;
     $durationDays = 3;
-    $apiService->sellAuction($assetId, $reservedPrice, $durationDays);
+    $apiService->createAuctionListing($assetId, $reservedPrice, $durationDays);
 }
 
 // You can also create your own custom request extending AbstractRequest
