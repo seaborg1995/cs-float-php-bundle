@@ -1,0 +1,76 @@
+# CS Float PHP Bundle
+
+**CS Float PHP Bundle** is a PHP SDK for interacting with the **CSFloat Market API**, making it easier to integrate CSFloat services in your PHP projects.
+
+## Requirements
+
+- PHP >= 7.1
+- Composer
+- Guzzle 7.x
+
+## Installation
+
+Install via Composer:
+
+`
+composer require dvdx1995/cs-float-php-bundle
+`
+
+## Usage
+
+```php
+<?php
+
+use Dvdx1995\CsFloatPhpBundle\Service\CsFloatInventoryApiService;
+
+// Create the API service with your API key
+$apiKey = 'YOUR_API_KEY';
+$apiService = new CsFloatInventoryApiService($apiKey);
+
+// Get your inventory items
+$inventoryItems = $apiService->getInventory();
+
+foreach ($inventoryItems as $item) {
+    // Work with each inventory item
+    // Example: list items for Buy Now or Auction
+
+    $assetId = $item['id']; // example
+    $price = 10.0; // example price
+
+    // Sell the item as Buy Now
+    $apiService->sellBuyNow($assetId, $price);
+
+    // Sell the item via Auction
+    $reservedPrice = 8.0;
+    $durationDays = 3;
+    $apiService->sellAuction($assetId, $reservedPrice, $durationDays);
+}
+
+// You can also create your own custom request extending AbstractRequest
+use Dvdx1995\CsFloatPhpBundle\AbstractRequest;
+
+class YourRequest extends AbstractRequest
+{
+    public function getMethod(): string
+    {
+        return 'request method';
+    }
+
+    public function getUrl(): string
+    {
+        return 'some url';
+    }
+
+    public function getBody(): array
+    {
+        return [
+            'body' => [
+                'some value' => 'abc',
+            ],
+        ];
+    }
+}
+```
+
+
+

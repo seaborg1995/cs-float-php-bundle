@@ -1,0 +1,23 @@
+{
+    "name": "dvdx1995/cs-float-php-bundle",
+    "description": "PHP Bundle for CSFloat market",
+    "version": "1.0.0",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^7.10"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dvdx1995\\CsFloatPhpBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Seaborg1995",
+            "email": "seaborg1995@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
