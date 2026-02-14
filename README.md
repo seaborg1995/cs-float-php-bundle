@@ -47,7 +47,7 @@ foreach ($inventoryItems as $item) {
 }
 
 // You can also create your own custom request extending AbstractRequest
-use CsFloatPhpBundle\AbstractRequest;
+use CsFloatPhpBundle\Request\AbstractRequest;
 
 class YourRequest extends AbstractRequest
 {
@@ -77,6 +77,7 @@ $apiService = new CsFloatApiService($apiKey);
 
 $apiService->call(new YourRequest())
 ```
+
 
 
 
