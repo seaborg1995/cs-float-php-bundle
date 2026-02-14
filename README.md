@@ -12,9 +12,9 @@
 
 Install via Composer:
 
-`
+```bash
 composer require dvdx1995/cs-float-php-bundle
-`
+````
 
 ## Usage
 
