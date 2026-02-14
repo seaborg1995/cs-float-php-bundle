@@ -21,7 +21,7 @@ composer require dvdx1995/cs-float-php-bundle
 ```php
 <?php
 
-useCsFloatPhpBundle\Service\CsFloatInventoryApiService;
+use CsFloatPhpBundle\Service\CsFloatInventoryApiService;
 
 // Create the API service with your API key
 $apiKey = 'YOUR_API_KEY';
@@ -71,6 +71,7 @@ class YourRequest extends AbstractRequest
     }
 }
 ```
+
 
 
 
