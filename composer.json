@@ -1,7 +1,6 @@
 {
     "name": "dvdx1995/cs-float-php-bundle",
     "description": "PHP Bundle for CSFloat market",
-    "version": "1.0.0",
     "type": "library",
     "require": {
         "php": ">=7.1",
