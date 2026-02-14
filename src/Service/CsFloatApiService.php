@@ -22,7 +22,7 @@ class CsFloatApiService
      * @param AbstractRequest $request
      * @return array
      */
-    protected function call(AbstractRequest $request): array
+    public function call(AbstractRequest $request): array
     {
         return $this->handler->handleApiRequest($request);
     }

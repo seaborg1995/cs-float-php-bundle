@@ -35,13 +35,13 @@ foreach ($inventoryItems as $item) {
     // Example: list items for Buy Now or Auction
 
     $assetId = $item['id']; // example
-    $price = 10.0; // example price
+    $price = 100 // 1$
 
     // Sell the item as Buy Now
     $apiService->sellBuyNow($assetId, $price);
 
     // Sell the item via Auction
-    $reservedPrice = 8.0;
+    $reservedPrice = 80 // 80 cents;
     $durationDays = 3;
     $apiService->sellAuction($assetId, $reservedPrice, $durationDays);
 }
@@ -70,8 +70,13 @@ class YourRequest extends AbstractRequest
         ];
     }
 }
-```
 
+// Create the API service with your API key
+$apiKey = 'YOUR_API_KEY';
+$apiService = new CsFloatApiService($apiKey);
+
+$apiService->call(new YourRequest())
+```
 
 
 

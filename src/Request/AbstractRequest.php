@@ -10,6 +10,7 @@ abstract class AbstractRequest
     abstract public function getMethod(): string;
 
     abstract public function getUrl(): string;
+
     abstract public function getParams(): array;
 
     public function getResponse(ResponseInterface $response)
