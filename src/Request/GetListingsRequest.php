@@ -118,8 +118,8 @@ class GetListingsRequest extends AbstractRequest
             'min_fade' => $this->minFade,
             'max_fade' => $this->maxFade,
             'sticker_options' => $this->stickerOptions,
-            'stickers' => $this->stickers,
-            'keychains' => $this->keychains,
+            'stickers' => $this->stickers ? json_encode($this->stickers) : null,
+            'keychains' => $this->keychains ? json_encode($this->keychains) : null,
         ];
 
         return [
