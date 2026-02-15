@@ -4,7 +4,7 @@ namespace CsFloatPhpBundle\Request;
 
 use CsFloatPhpBundle\Helper\RequestMethodConst;
 
-class GetItemSalesHistoryRequest extends AbstractRequest
+class GetItemLatestSalesRequest extends AbstractRequest
 {
     private $paintIndex;
     private $itemFullName;

@@ -4,19 +4,15 @@ namespace CsFloatPhpBundle\Request;
 
 use CsFloatPhpBundle\Helper\RequestMethodConst;
 
-class GetTradesRequest extends AbstractRequest
+class GetBuyOrdersRequest extends AbstractRequest
 {
-    private $role;
-    private $states;
     private $limit;
-    private $page;
+    private $listingId;
 
-    public function __construct(string $role, array $states, int $limit, int $page)
+    public function __construct(int $limit, int $listingId)
     {
-        $this->role = $role;
-        $this->states = $states;
         $this->limit = $limit;
-        $this->page = $page;
+        $this->listingId = $listingId;
     }
 
     public function getMethod(): string
@@ -26,7 +22,7 @@ class GetTradesRequest extends AbstractRequest
 
     public function getUrl(): string
     {
-        return 'me/trades';
+        return sprintf('listings/%d/buy-orders', $this->listingId);
     }
 
     public function getParams(): array
@@ -34,9 +30,6 @@ class GetTradesRequest extends AbstractRequest
         return [
             'query' => [
                 'limit' => $this->limit,
-                'page' => $this->page,
-                'role' => $this->role,
-                'state' => implode(',', $this->states),
             ],
         ];
     }
