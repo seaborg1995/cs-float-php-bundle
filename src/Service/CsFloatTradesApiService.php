@@ -2,7 +2,8 @@
 
 namespace CsFloatPhpBundle\Service;
 
-use CsFloatPhpBundle\Request\GetTradesRequest;
+use CsFloatPhpBundle\Request\Trades\BulkAcceptTradesRequest;
+use CsFloatPhpBundle\Request\Trades\GetTradesRequest;
 
 class CsFloatTradesApiService extends CsFloatApiService
 {
@@ -23,5 +24,15 @@ class CsFloatTradesApiService extends CsFloatApiService
     public function getTrades(string $role, array $states, int $page, int $limit): array
     {
         return $this->call(new GetTradesRequest($role, $states, $limit, $page));
+    }
+
+    /**
+     * Bulk accept multiple trades at once
+     * @param array $tradeIds Array of trade IDs to accept
+     * @return array
+     */
+    public function bulkAcceptTrades(array $tradeIds): array
+    {
+        return $this->call(new BulkAcceptTradesRequest($tradeIds));
     }
 }

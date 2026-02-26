@@ -1,10 +1,11 @@
 <?php
 
-namespace CsFloatPhpBundle\Request;
+namespace CsFloatPhpBundle\Request\Listings;
 
 use CsFloatPhpBundle\Helper\RequestMethodConst;
+use CsFloatPhpBundle\Request\AbstractRequest;
 
-class DeleteUserListingRequest extends AbstractRequest
+class GetSimilarListingsRequest extends AbstractRequest
 {
     private $listingId;
 
@@ -15,12 +16,12 @@ class DeleteUserListingRequest extends AbstractRequest
 
     public function getMethod(): string
     {
-        return RequestMethodConst::DELETE;
+        return RequestMethodConst::GET;
     }
 
     public function getUrl(): string
     {
-        return 'listings/' . $this->listingId;
+        return sprintf('listings/%d/similar', $this->listingId);
     }
 
     public function getParams(): array

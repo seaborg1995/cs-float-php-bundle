@@ -1,8 +1,9 @@
 <?php
 
-namespace CsFloatPhpBundle\Request;
+namespace CsFloatPhpBundle\Request\Items;
 
 use CsFloatPhpBundle\Helper\RequestMethodConst;
+use CsFloatPhpBundle\Request\AbstractRequest;
 
 class GetItemLatestSalesRequest extends AbstractRequest
 {

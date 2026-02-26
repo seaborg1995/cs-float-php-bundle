@@ -2,17 +2,17 @@
 
 namespace CsFloatPhpBundle\Service;
 
-use CsFloatPhpBundle\Request\DeleteUserListingRequest;
-use CsFloatPhpBundle\Request\GetBuyOrdersRequest;
-use CsFloatPhpBundle\Request\GetInventoryRequest;
-use CsFloatPhpBundle\Request\GetItemSalesGraphRequest;
-use CsFloatPhpBundle\Request\GetItemLatestSalesRequest;
-use CsFloatPhpBundle\Request\GetListingsRequest;
-use CsFloatPhpBundle\Request\GetSimilarListingsRequest;
-use CsFloatPhpBundle\Request\GetUserStallRequest;
-use CsFloatPhpBundle\Request\PatchUserListingRequest;
-use CsFloatPhpBundle\Request\PatchUserRequest;
-use CsFloatPhpBundle\Request\PostUserListingRequest;
+use CsFloatPhpBundle\Request\Inventory\GetInventoryRequest;
+use CsFloatPhpBundle\Request\Items\GetItemSalesGraphRequest;
+use CsFloatPhpBundle\Request\Items\GetItemLatestSalesRequest;
+use CsFloatPhpBundle\Request\Listings\DeleteUserListingRequest;
+use CsFloatPhpBundle\Request\Listings\GetListingsRequest;
+use CsFloatPhpBundle\Request\Listings\GetSimilarListingsRequest;
+use CsFloatPhpBundle\Request\Listings\PatchUserListingRequest;
+use CsFloatPhpBundle\Request\Listings\PostUserListingRequest;
+use CsFloatPhpBundle\Request\Orders\GetBuyOrdersRequest;
+use CsFloatPhpBundle\Request\User\GetUserStallRequest;
+use CsFloatPhpBundle\Request\User\PatchUserRequest;
 
 class CsFloatListingApiService extends CsFloatApiService
 {

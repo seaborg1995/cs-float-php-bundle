@@ -1,8 +1,9 @@
 <?php
 
-namespace CsFloatPhpBundle\Request;
+namespace CsFloatPhpBundle\Request\Trades;
 
 use CsFloatPhpBundle\Helper\RequestMethodConst;
+use CsFloatPhpBundle\Request\AbstractRequest;
 
 class GetTradesRequest extends AbstractRequest
 {

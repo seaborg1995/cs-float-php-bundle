@@ -1,8 +1,9 @@
 <?php
 
-namespace CsFloatPhpBundle\Request;
+namespace CsFloatPhpBundle\Request\Listings;
 
 use CsFloatPhpBundle\Helper\RequestMethodConst;
+use CsFloatPhpBundle\Request\AbstractRequest;
 
 class PostUserListingRequest extends AbstractRequest
 {
